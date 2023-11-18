@@ -27,9 +27,6 @@ document.querySelector(".again").addEventListener("click", function () {
 function validSecreteNumer(number) {
   if (number === 0) {
     secretNumber = Math.round(Math.random() * 20);
-    document.querySelector(".number").textContent = secretNumber;
-  } else {
-    document.querySelector(".number").textContent = secretNumber;
   }
 }
 
@@ -41,6 +38,7 @@ function validIfUserWin(guess) {
   } else if (guess === secretNumber) {
     const btnCheck = document.querySelector(".check");
     winnerBackground.style.backgroundColor = "#60b347";
+    document.querySelector(".number").textContent = secretNumber;
     hightScoreValidate(score.textContent);
     btnCheck.removeEventListener;
     message.textContent = gameMessage("guess");

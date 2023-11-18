@@ -22,6 +22,7 @@ document.querySelector(".again").addEventListener("click", function () {
   secretNumber = Math.round(Math.random() * 20);
   validSecreteNumer(secretNumber);
   message.textContent = "Start guessing...";
+  document.querySelector(".number").textContent = "?";
 });
 
 function validSecreteNumer(number) {
